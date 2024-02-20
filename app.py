@@ -5,7 +5,7 @@ import pickle
 
 
 
-model=pickle.load(open('//model.pkl','rb'))
+model=pickle.load(open('model//model.pkl','rb'))
 data = pd.read_csv('data//HR_comma_sep.csv').head(5)
 st.title("Employee Churn Prediction")
 st.image("data//churn.png", width=500)
