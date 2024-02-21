@@ -15,6 +15,7 @@ nav = st.sidebar.radio("Navigation",["Aim","Prediction"])
 
 if nav == 'Aim':
     st.markdown(""" #### Aim of the Project """)
+    st.markdown(""" Employee churn prediction model is a predictive analytics tool that uses historical data on employees and various features such as demographics, performance metrics, job satisfaction surveys, and other relevant factors to forecast the likelihood of an employee leaving the organization""")
 
     if st.checkbox("Show Table"):
         st.table(data)
