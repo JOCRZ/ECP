@@ -4,7 +4,7 @@ import pandas as pd
 import joblib
 
 
-
+@st.cache(allow_output_mutation=True)
 model = joblib.load('model.joblib')
 data = pd.read_csv('data//HR_comma_sep.csv').head(5)
 st.title("Employee Churn Prediction")
