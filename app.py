@@ -1,11 +1,11 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-import pickle
+import joblib
 
 
 
-model=pickle.load(open('model//model.pkl','rb'))
+model = joblib.load('model.joblib')
 data = pd.read_csv('data//HR_comma_sep.csv').head(5)
 st.title("Employee Churn Prediction")
 st.image("data//churn.png", width=500)
@@ -80,4 +80,5 @@ if nav == 'Prediction':
             st.success('Leaving the Firm')
     
         
-        
+if __name__=='__predict_churn__':
+    predict_churn()      
